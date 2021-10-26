@@ -1,0 +1,17 @@
+mybatis:
+  # 指定 mapper.xml 的位置
+  mapper-locations: classpath:zjou/gxy/demo/mapper/*.xml
+  #扫描实体类的位置,在此处指明扫描实体类的包，在 mapper.xml 中就可以不写实体类的全路径名
+  type-aliases-package: zjou/gxy/demo/bean
+  configuration:
+    #默认开启驼峰命名法，可以不用设置该属性
+    map-underscore-to-camel-case: true
+
+---
+#数据源连接信息
+spring:
+  datasource:
+    username: root
+    password: gg12138.
+    url: jdbc:mysql://127.0.0.1:3306/demo
+    driver-class-name: com.mysql.cj.jdbc.Driver
